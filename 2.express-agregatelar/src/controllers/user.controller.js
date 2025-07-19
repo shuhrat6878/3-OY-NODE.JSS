@@ -3,7 +3,9 @@ import User from '../models/users.model.js';
 export class UserController {
     async createUser(req, res) {
         try {
+            console.log('rtdrterdt');
             const user = await User.create(req.body);
+            
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
